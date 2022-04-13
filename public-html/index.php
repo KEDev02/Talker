@@ -1,97 +1,21 @@
-<?php
-$website = 'http://www.google.at';
-?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TALKER</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  </head>
+  <body>
+    <h1>TALKER</h1>
 
-<!DOCTYPE html>  
-<head>  
- <title>Hello World!</title>
-</head>
-
-<body>  
- <h1>Hello World!</h1>
- <a href="<?php echo $website; ?>"><?php echo "Google Websearch: $website"; ?></a>
- <?php
- $trueValue = true;
- $falseValue = false;
- ?>
- <p><?php echo "This is the Value of trueValue: $trueValue"; ?></p>
- <p><?php echo "This is the Value of falseValue: $falseValue"; ?></p>
-
- <p>
-     <?php
-     $countries = array('Finland', 'France', 'Spain');
-     print_r($countries);
-     $countries[] = 'Italy';
-     print_r($countries);
-     ?>
- </p>
-
- <script>
-     var cars = ["Mercedes", "Volvo", "BMW", "Tesla"];
-     for (i in cars) {
-         console.log("The current car is " + cars[i]);
-     }
- </script>
-
- <?php
-    $cars = ["Mercedes", "Volvo", "BMW", "Tesla"];
-    foreach ($cars as $i) {
-        echo "The current car is $i<br>";
-    }
- ?>
-
- <p>
-     <?php
-        class carBluePrint {
-            //Properties and Methods
-            
-            //Constructor
-            public function __construct($newColor, $newMake) {
-                $this->color = $newColor;
-                $this->make = $newMake;
-            }
-
-            //setter method
-            public function setColor($newColor) {
-                $this->color = $newColor;
-            }
-
-            //getter method
-            public function getColor() {
-                return "<br>New color is: " . $this->color . "<br>";
-            }
-        }
-
-        $firstRealCar = new carBluePrint('green', 'Volvo');
-        var_dump($firstRealCar);
-        echo $firstRealCar->color;
-        echo $firstRealCar->getColor();
-
-        $secondRealCar = new carBluePrint('brown', 'Mercedes');
-        echo $secondRealCar->getColor();
-        var_dump($secondRealCar);
-     ?>
- </p>
-
- <p>
-    <?php
-        class sportsCarBluePrint extends carBluePrint {
-            //constructor
-            public function __construct($newColor, $newMake, $newSpoiler) {
-                parent::__construct($newColor, $newMake);
-                $this->spoiler = $newSpoiler;
-            }
-
-            public function activateSpoiler() {
-                return "<br><strong>SPOILER ACTIVE</strong><br>";
-            }
-        }
-
-        $firstSportCar = new sportsCarBluePrint('magenta', 'Porsche', 'tail');
-        $firstSportCar->setColor("PINK");
-        var_dump($firstSportCar);
-        $firstSportCar->activateSpoiler();
-    ?>
- </p>
-
-</body>
+    <!-- Optional Javascript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
